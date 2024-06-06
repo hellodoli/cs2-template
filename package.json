@@ -1,0 +1,16 @@
+{
+  "name": "cs2-tem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass styles/index.scss -o dist",
+    "css:watch": "npm run css && node-sass styles/index.scss -wo dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  },
+  "dependencies": {}
+}

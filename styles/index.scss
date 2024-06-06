@@ -1,0 +1,19 @@
+// Bootstrap variables & mixins
+@import '../lib/bootstrap/scss/functions';
+@import '../lib/bootstrap/scss/variables';
+@import '../lib/bootstrap/scss/mixins';
+// Global style
+@import 'variables/variables';
+@import 'mixins';
+@import 'fonts';
+@import 'helpers';
+// Components
+@import 'container';
+@import 'components/header';
+@import 'components/buttons';
+@import 'components/room-card';
+@import 'components/room_info';
+@import 'components/drawer';
+@import 'components/table';
+@import 'components/modal';
+@import 'media-query';

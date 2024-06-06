@@ -1,0 +1,66 @@
+.table-wrapper {
+  overflow: auto hidden;
+  margin-top: 1.25rem;
+}
+
+.table {
+  --bs-table-color: var(--color-contentPrimary);
+  --bs-table-bg: var(--color-bgSecondary);
+  --bs-border-width: 0;
+  --border-r: 0.375rem;
+  font-size: 1rem;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+
+  // th, td
+  & > :not(caption) > *:not(.empty-row) > * {
+    padding: 1.125rem 1.5rem;
+    color: var(--color-contentQuaternary);
+    vertical-align: middle;
+    &:first-child {
+      border-top-left-radius: var(--border-r);
+      border-bottom-left-radius: var(--border-r);
+    }
+    &:last-child {
+      border-top-right-radius: var(--border-r);
+      border-bottom-right-radius: var(--border-r);
+    }
+    &.text-game-red {
+      color: var(--color-game-red);
+    }
+    &.text-game-green {
+      color: var(--color-game-green);
+    }
+    &.text-game-blue {
+      color: var(--color-game-blue);
+    }
+    &.text-game-yellow {
+      color: var(--color-game-yellow);
+    }
+  }
+
+  // th
+  & > :not(caption) > tr > th {
+    font-weight: 700;
+  }
+
+  //td
+  & > :not(caption) > tr > td {
+    &:not(:first-child) {
+      color: var(--color-contentPrimary);
+      font-weight: 400;
+    }
+  }
+
+  // hack: make gap each row
+  tr.empty-row {
+    opacity: 0;
+    visibility: hidden;
+    user-select: none;
+    & > th {
+      border: none;
+      padding-top: 0.3125rem;
+    }
+  }
+}
